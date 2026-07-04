@@ -74,4 +74,3 @@ poetry run python train.py
 The script trains the model, displays the final metrics and copies
 `titanic_model.keras` and `scaler.pkl` to the `../app/` folder
 automatically.
-

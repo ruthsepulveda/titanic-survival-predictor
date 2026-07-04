@@ -313,8 +313,3 @@ Portfolio project developed as part of the Applied Machine Learning Diploma (UC 
 
 
 \*Dataset: Titanic dataset available in Seaborn. Historical images in the public domain.\*
-
-
-
-
-

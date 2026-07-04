@@ -62,4 +62,3 @@ app/
 - Survival probability with visual bar
 - Contextual historical image based on result
 - Historical context with real survival rates by group
-
