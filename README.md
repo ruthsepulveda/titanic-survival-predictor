@@ -123,7 +123,7 @@ The user completes a passenger profile and receives:
 \## Model architecture
 
 
-
+```
 Input (7 features)
 
 ↓
@@ -146,7 +146,7 @@ Dropout(0.3)
 
 Dense(1, Sigmoid) ← survival probability
 
-
+```
 
 \---
 
@@ -184,6 +184,7 @@ The RMS Titanic struck an iceberg at 11:40 PM on April 14, 1912 and sank at 2:20
 
 \## Project structure
 
+```
 titanic-survival/
 
 ├── model/
@@ -227,7 +228,7 @@ titanic-survival/
 │ └── README.md
 
 └── README.md
-
+```
 
 
 \---
