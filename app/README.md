@@ -11,47 +11,43 @@ boarding pass and historical narrative.
 
 ## Run with Docker
 
-### 1. Build the image
-```bash
-docker build -t titanic-app .
-```
+1. Build the image
 
-### 2. Run the container
-```bash
-docker run -p 7860:7860 -d titanic-app
-```
+    docker build -t titanic-app .
 
-### 3. Open the app
-Open your browser at: http://localhost:7860
+2. Run the container
+
+    docker run -p 7860:7860 -d titanic-app
+
+3. Open your browser at http://localhost:7860
 
 ## Run with Poetry (without Docker)
 
-### 1. Install dependencies
-```bash
-poetry install
-```
+1. Install dependencies
 
-### 2. Run the app
-```bash
-poetry run streamlit run main.py
-```
+    poetry install
+
+2. Run the app
+
+    poetry run streamlit run main.py
 
 ## Structure
-app/
-├── Dockerfile
-├── main.py
-├── titanic_model.keras
-├── scaler.pkl
-├── images/
-│ ├── titanic.jpg
-│ ├── first_class.jpg
-│ ├── second_class.jpg
-│ ├── third_class.jpg
-│ ├── lifeboats.jpg
-│ └── sinking.jpg
-├── pyproject.toml
-├── poetry.lock
-└── README.md
+
+    app/
+    ├── Dockerfile
+    ├── main.py
+    ├── titanic_model.keras
+    ├── scaler.pkl
+    ├── images/
+    │   ├── titanic.jpg
+    │   ├── first_class.jpg
+    │   ├── second_class.jpg
+    │   ├── third_class.jpg
+    │   ├── lifeboats.jpg
+    │   └── sinking.jpg
+    ├── pyproject.toml
+    ├── poetry.lock
+    └── README.md
 
 ## App features
 - Booking form with 8 interactive widgets
@@ -62,3 +58,4 @@ app/
 - Survival probability with visual bar
 - Contextual historical image based on result
 - Historical context with real survival rates by group
+
