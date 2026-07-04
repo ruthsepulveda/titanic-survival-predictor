@@ -74,48 +74,7 @@ The user completes a passenger profile and receives:
         ↓
     Dense(1, Sigmoid)
 
-<<<<<<< HEAD
 ---
-=======
-\---
-
-
-
-\## Model architecture
-
-
-```
-Input (7 features)
-
-↓
-
-Dense(64, ReLU)
-
-↓
-
-Dropout(0.3)
-
-↓
-
-Dense(32, ReLU)
-
-↓
-
-Dropout(0.3)
-
-↓
-
-Dense(1, Sigmoid) ← survival probability
-
-```
-
-\---
-
-
-
-\## Historical context
-
->>>>>>> cf8fb18aa0c45a89d03c5a9c9b4d1e0790a7f2bc
 
 ## Historical context
 
@@ -144,139 +103,20 @@ Open http://localhost:7860 in your browser.
 
 ## Run locally with Poetry
 
-<<<<<<< HEAD
     cd app/
     poetry install
     poetry run streamlit run main.py
-=======
-```
-titanic-survival/
->>>>>>> cf8fb18aa0c45a89d03c5a9c9b4d1e0790a7f2bc
 
 ---
 
 ## Tech stack
 
-<<<<<<< HEAD
 - Python 3.12
 - Keras + TensorFlow
 - Scikit-learn
 - Streamlit
 - Poetry
 - Docker
-=======
-│ ├── pyproject.toml
-
-│ ├── poetry.lock
-
-│ └── README.md
-
-├── app/
-
-│ ├── Dockerfile
-
-│ ├── main.py
-
-│ ├── titanic\_model.keras
-
-│ ├── scaler.pkl
-
-│ ├── images/
-
-│ │ ├── titanic.jpg
-
-│ │ ├── first\_class.jpg
-
-│ │ ├── second\_class.jpg
-
-│ │ ├── third\_class.jpg
-
-│ │ ├── lifeboats.jpg
-
-│ │ └── sinking.jpg
-
-│ ├── pyproject.toml
-
-│ ├── poetry.lock
-
-│ └── README.md
-
-└── README.md
-```
-
-
-\---
-
-
-
-\## Run locally with Docker
-
-
-
-```bash
-
-cd app/
-
-docker build -t titanic-app .
-
-docker run -p 8501:8501 -d titanic-app
-
-```
-
-
-
-Open http://localhost:8501 in your browser.
-
-
-
-\---
-
-
-
-\## Run locally with Poetry
-
-
-
-```bash
-
-cd app/
-
-poetry install
-
-poetry run streamlit run main.py
-
-```
-
-
-
-\---
-
-
-
-\## Tech stack
-
-
-
-\- Python 3.12
-
-\- Keras + TensorFlow
-
-\- Scikit-learn
-
-\- Streamlit
-
-\- Poetry
-
-\- Docker
-
-
-
-\---
-
-
-
-\## About
->>>>>>> cf8fb18aa0c45a89d03c5a9c9b4d1e0790a7f2bc
 
 ---
 
