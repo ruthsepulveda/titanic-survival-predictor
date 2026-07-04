@@ -1,77 +1,77 @@
-# Modelo: Predicción de Supervivencia en el Titanic
+# Model: RMS Titanic Survival Prediction
 
-## Descripción
-Red neuronal MLP entrenada con el dataset del Titanic para predecir
-si un pasajero habría sobrevivido al hundimiento del RMS Titanic
-el 15 de abril de 1912.
+## Description
+MLP neural network trained on the Titanic dataset to predict whether
+a passenger would have survived the sinking of the RMS Titanic on
+April 15, 1912.
 
 ## Dataset
-Dataset del Titanic disponible directamente en Seaborn
-(`seaborn.load_dataset("titanic")`). No requiere descarga externa.
+Titanic dataset available directly in Seaborn
+(`seaborn.load_dataset("titanic")`). No external download required.
 
-- Filas originales: 891
-- Filas después de limpieza: 712
-- Features utilizadas: 7
-- Variable objetivo: survived (0 = no sobrevivió, 1 = sobrevivió)
+- Original rows: 891
+- Rows after cleaning: 712
+- Features used: 7
+- Target variable: survived (0 = did not survive, 1 = survived)
 
-## Features del modelo
+## Model features
 
-| Feature | Descripción | Tipo |
+| Feature | Description | Type |
 |---|---|---|
-| pclass | Clase del pasaje (1, 2, 3) | Entero |
-| sex | Sexo (0=male, 1=female) | Binario |
-| age | Edad en años | Float |
-| fare | Precio del pasaje | Float |
-| embarked | Puerto de embarque (0=S, 1=C, 2=Q) | Entero |
-| alone | ¿Viajaba solo? (0=no, 1=sí) | Binario |
-| family_size | Total de familiares a bordo | Entero |
+| pclass | Ticket class (1, 2, 3) | Integer |
+| sex | Sex (0=male, 1=female) | Binary |
+| age | Age in years | Float |
+| fare | Ticket price | Float |
+| embarked | Port of embarkation (0=S, 1=C, 2=Q) | Integer |
+| alone | Travelling alone? (0=no, 1=yes) | Binary |
+| family_size | Total family members on board | Integer |
 
-## Arquitectura
+## Architecture
 
-| Capa | Tipo | Detalles |
+| Layer | Type | Details |
 |---|---|---|
 | 1 | Input | 7 features |
-| 2 | Dense | 64 neuronas, activación ReLU |
+| 2 | Dense | 64 neurons, ReLU activation |
 | 3 | Dropout | 30% |
-| 4 | Dense | 32 neuronas, activación ReLU |
+| 4 | Dense | 32 neurons, ReLU activation |
 | 5 | Dropout | 30% |
-| 6 | Dense | 1 neurona, activación Sigmoid |
+| 6 | Dense | 1 neuron, Sigmoid activation |
 
-## Entrenamiento
+## Training
 
-| Parámetro | Valor |
+| Parameter | Value |
 |---|---|
 | Epochs | 50 |
 | Batch size | 32 |
-| Optimizador | Adam |
-| Función de pérdida | Binary Crossentropy |
-| Class weight | Balanceado |
-| Parámetros entrenables | 2,625 |
+| Optimizer | Adam |
+| Loss function | Binary Crossentropy |
+| Class weight | Balanced |
+| Trainable parameters | 2,625 |
 
-## Métricas finales
+## Final metrics
 
-| Métrica | Valor |
+| Metric | Value |
 |---|---|
 | Test accuracy | 79.72% |
 | Test loss | 0.4720 |
 
-## Requisitos
-- Python 3.12.10
+## Requirements
+- Python 3.12
 - Poetry
 
-## Instrucciones
+## Instructions
 
-### 1. Instalar dependencias
+### 1. Install dependencies
 ```bash
 poetry install
 ```
 
-### 2. Entrenar el modelo
+### 2. Train the model
 ```bash
 poetry run python train.py
 ```
 
-El script entrena el modelo, muestra las métricas finales y copia
-`titanic_model.keras` y `scaler.pkl` a la carpeta `../app/`
-automáticamente.
+The script trains the model, displays the final metrics and copies
+`titanic_model.keras` and `scaler.pkl` to the `../app/` folder
+automatically.
 

@@ -1,46 +1,42 @@
-# RMS Titanic — Survival Predictor
+# App: RMS Titanic — Survival Predictor
 
-## Descripción
-Aplicación Streamlit que predice si un pasajero habría sobrevivido 
-al hundimiento del RMS Titanic el 15 de abril de 1912, usando una 
-red neuronal MLP entrenada con datos históricos reales.
+## Description
+Streamlit application that uses a Keras MLP neural network to predict
+whether a passenger would have survived the sinking of the RMS Titanic.
+The user fills in a passenger profile and the app generates a personalised
+boarding pass and historical narrative.
 
-El usuario completa un perfil de pasajero (nombre, clase, edad, 
-puerto de embarque, precio del pasaje y compañía de viaje) y recibe 
-un boleto de embarque personalizado junto con una narrativa histórica 
-que describe su destino esa noche.
+## Requirements
+- Docker Desktop installed and running
 
-## Requisitos
-- Docker Desktop instalado y corriendo
+## Run with Docker
 
-## Instrucciones para ejecutar con Docker
-
-### 1. Construir la imagen
+### 1. Build the image
 ```bash
 docker build -t titanic-app .
 ```
 
-### 2. Ejecutar el contenedor
+### 2. Run the container
 ```bash
-docker run -p 8501:8501 -d titanic-app
+docker run -p 7860:7860 -d titanic-app
 ```
 
-### 3. Abrir la aplicación
-Abre tu navegador en: http://localhost:8501
+### 3. Open the app
+Open your browser at: http://localhost:7860
 
-## Instrucciones para ejecutar con Poetry (sin Docker)
+## Run with Poetry (without Docker)
 
-### 1. Instalar dependencias
+### 1. Install dependencies
 ```bash
 poetry install
 ```
 
-### 2. Ejecutar la aplicación
+### 2. Run the app
 ```bash
 poetry run streamlit run main.py
 ```
 
-## Estructura
+## Structure
 app/
 ├── Dockerfile
 ├── main.py
@@ -57,13 +53,13 @@ app/
 ├── poetry.lock
 └── README.md
 
-## Características de la app
-- Formulario de reserva de pasaje con 8 widgets interactivos
-- Foto histórica del camarote según la clase seleccionada
-- Boleto de embarque personalizado estilo White Star Line
-- Narrativa histórica personalizada según clase, sexo, edad,
-  puerto de embarque, precio del pasaje y compañía de viaje
-- Probabilidad de supervivencia con barra visual
-- Imagen histórica contextual según el resultado
-- Contexto histórico con tasas reales de supervivencia por grupo
+## App features
+- Booking form with 8 interactive widgets
+- Historical cabin photo based on selected class
+- Personalised boarding pass in White Star Line style
+- Historical narrative personalised by class, sex, age, port,
+  ticket price and travel companions
+- Survival probability with visual bar
+- Contextual historical image based on result
+- Historical context with real survival rates by group
 
